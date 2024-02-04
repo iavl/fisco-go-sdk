@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	helloworld "github.com/FISCO-BCOS/go-sdk/.ci/hello"
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/conf"
 	"github.com/ethereum/go-ethereum/common"
+	helloworld "github.com/iavl/fisco-go-sdk/.ci/hello"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/conf"
 )
 
 const (

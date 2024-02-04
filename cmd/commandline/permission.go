@@ -3,9 +3,9 @@ package commandline
 import (
 	"fmt"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/precompiled/permission"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/precompiled/permission"
 	"github.com/spf13/cobra"
 )
 

@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/conf"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/conf"
 )
 
 func getClient(t *testing.T) *client.Client {

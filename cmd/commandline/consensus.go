@@ -3,7 +3,7 @@ package commandline
 import (
 	"fmt"
 
-	"github.com/FISCO-BCOS/go-sdk/precompiled/consensus"
+	"github.com/iavl/fisco-go-sdk/precompiled/consensus"
 	"github.com/spf13/cobra"
 )
 

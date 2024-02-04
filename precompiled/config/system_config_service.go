@@ -3,10 +3,10 @@ package config
 import (
 	"fmt"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/core/types"
-	"github.com/FISCO-BCOS/go-sdk/precompiled"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/core/types"
+	"github.com/iavl/fisco-go-sdk/precompiled"
 )
 
 // SystemConfigService is a precompile contract service.

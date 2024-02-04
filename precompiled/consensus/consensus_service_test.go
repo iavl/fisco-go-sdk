@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/conf"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/conf"
 )
 
 const (

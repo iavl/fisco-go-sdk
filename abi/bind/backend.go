@@ -21,9 +21,9 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/FISCO-BCOS/go-sdk/core/types"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/iavl/fisco-go-sdk/core/types"
 )
 
 var (

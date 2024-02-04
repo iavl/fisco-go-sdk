@@ -1,10 +1,10 @@
 
 [Network]
 #type rpc or channel
-Type="channel"
-CAFile="ca.crt"
-Cert="sdk.crt"
-Key="sdk.key"
+Type="rpc"
+CAFile="./sdk/gm/gmca.crt"
+Cert="./sdk/gm/gmsdk.crt"
+Key="./sdk/gm/gmsdk.key"
 # if the certificate context is not empty, use it, otherwise read from the certificate file
 # multi lines use triple quotes
 CAContext=''''''
@@ -12,19 +12,16 @@ KeyContext=''''''
 CertContext=''''''
 
 [[Network.Connection]]
-NodeURL="127.0.0.1:20200"
+NodeURL="121.196.203.127:8545"
 GroupID=1
-# [[Network.Connection]]
-# NodeURL="127.0.0.1:20200"
-# GroupID=2
 
 [Account]
 # only support PEM format for now
-KeyFile=".ci/0x83309d045a19c44dc3722d15a6abd472f95866ac.pem"
+KeyFile="./accounts_gm/0x1d29e94559b887e32020074c190522d5354f121b.pem"
 
 [Chain]
 ChainID=1
-SMCrypto=false
+SMCrypto=true
 
 [log]
 Path="./"

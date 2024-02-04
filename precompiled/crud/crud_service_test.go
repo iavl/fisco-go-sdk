@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/conf"
-	"github.com/FISCO-BCOS/go-sdk/core/types"
-	"github.com/FISCO-BCOS/go-sdk/precompiled"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/conf"
+	"github.com/iavl/fisco-go-sdk/core/types"
+	"github.com/iavl/fisco-go-sdk/precompiled"
 )
 
 const (

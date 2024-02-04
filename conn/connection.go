@@ -26,7 +26,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/FISCO-BCOS/go-sdk/core/types"
+	"github.com/iavl/fisco-go-sdk/core/types"
 )
 
 var (

@@ -5,11 +5,11 @@ Golang SDK For FISCO BCOS 2.2.0+
 [![CodeFactor](https://www.codefactor.io/repository/github/fisco-bcos/go-sdk/badge)](https://www.codefactor.io/repository/github/fisco-bcos/go-sdk)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/afbb696df3a8436a9e446d39251b2158)](https://www.codacy.com/gh/FISCO-BCOS/go-sdk?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FISCO-BCOS/go-sdk&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/FISCO-BCOS/go-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/FISCO-BCOS/go-sdk)
-[![Code Lines](https://tokei.rs/b1/github/FISCO-BCOS/go-sdk?category=code)](https://github.com/FISCO-BCOS/go-sdk)
-[![version](https://img.shields.io/github/tag/FISCO-BCOS/go-sdk.svg)](https://github.com/FISCO-BCOS/go-sdk/releases/latest)
+[![Code Lines](https://tokei.rs/b1/github/FISCO-BCOS/go-sdk?category=code)](https://github.com/iavl/fisco-go-sdk)
+[![version](https://img.shields.io/github/tag/FISCO-BCOS/go-sdk.svg)](https://github.com/iavl/fisco-go-sdk/releases/latest)
 
 
-![FISCO-BCOS Go-SDK GitHub Actions](https://github.com/FISCO-BCOS/go-sdk/workflows/FISCO-BCOS%20Go-SDK%20GitHub%20Actions/badge.svg)
+![FISCO-BCOS Go-SDK GitHub Actions](https://github.com/iavl/fisco-go-sdk/workflows/FISCO-BCOS%20Go-SDK%20GitHub%20Actions/badge.svg)
 [![Build Status](https://travis-ci.org/FISCO-BCOS/go-sdk.svg?branch=master)](https://travis-ci.org/FISCO-BCOS/go-sdk)
 
 ____
@@ -36,11 +36,11 @@ FISCO BCOS Go语言版本的SDK，主要实现的功能有：
 [Network]
 #type rpc or channel
 Type="channel"
-CAFile="ca.crt"
-Cert="sdk.crt"
-Key="sdk.key"
+CAFile="./sdk/gm/ca.crt"
+Cert="./sdk/gm/sdk.crt"
+Key="./sdk/gm/sdk.key"
 [[Network.Connection]]
-NodeURL="127.0.0.1:20200"
+NodeURL="121.196.203.127:20200"
 GroupID=1
 # [[Network.Connection]]
 # NodeURL="127.0.0.1:20200"
@@ -85,7 +85,7 @@ SMCrypto=false
 1. 拉取代码并编译
 
 ```bash
-git clone https://github.com/FISCO-BCOS/go-sdk.git
+git clone https://github.com/iavl/fisco-go-sdk.git
 cd go-sdk
 go mod tidy
 go build cmd/console.go
@@ -106,7 +106,7 @@ go build cmd/console.go
 以下的示例是通过`import`的方式来使用`go-sdk`，如引入RPC控制台库:
 
 ```go
-import "github.com/FISCO-BCOS/go-sdk/client"
+import "github.com/iavl/fisco-go-sdk/client"
 ```
 
 ## Solidity合约编译为Go文件
@@ -147,7 +147,7 @@ contract Store {
 
 ```bash
 # 如果是国密则添加-g选项
-bash tools/download_solc.sh -v 0.4.25
+bash tools/download_solc.sh -v 0.6.10 -g
 ```
 
 3.构建`go-sdk`的代码生成工具`abigen`
@@ -206,9 +206,9 @@ import (
     "fmt"
     "log"
 
-    "github.com/FISCO-BCOS/go-sdk/client"
-    "github.com/FISCO-BCOS/go-sdk/conf"
-    "github.com/FISCO-BCOS/go-sdk/store" // import store
+    "github.com/iavl/fisco-go-sdk/client"
+    "github.com/iavl/fisco-go-sdk/conf"
+    "github.com/iavl/fisco-go-sdk/store" // import store
 )
 
 func main(){

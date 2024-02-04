@@ -8,11 +8,11 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/FISCO-BCOS/go-sdk/client"
-	"github.com/FISCO-BCOS/go-sdk/conf"
-	"github.com/FISCO-BCOS/go-sdk/core/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/iavl/fisco-go-sdk/client"
+	"github.com/iavl/fisco-go-sdk/conf"
+	"github.com/iavl/fisco-go-sdk/core/types"
 	"github.com/sirupsen/logrus"
 )
 
