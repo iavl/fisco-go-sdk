@@ -28,18 +28,18 @@ func main() {
 	}
 
 	// deploy contract
-	//fmt.Println("-------------------starting deploy contract-----------------------")
-	//address, tx, instance, err := filehub.DeployFileHub(client.GetTransactOpts(), client)
-	//if err != nil {
-	//	logrus.Fatal(err)
-	//}
-	//fmt.Println("contract address: ", address.Hex()) // the address should be saved
-	//fmt.Println("transaction hash: ", tx.Hash().Hex())
-	//_ = instance
+	fmt.Println("-------------------starting deploy contract-----------------------")
+	address, tx, _, err := filehub.DeployFileHub(client.GetTransactOpts(), client)
+	if err != nil {
+		logrus.Fatal(err)
+	}
+	fmt.Println("contract address: ", address.Hex()) // the address should be saved
+	fmt.Println("transaction hash: ", tx.Hash().Hex())
 
 	// setup FileHub contract instance
 	fmt.Println("\n-------------------setup fileHub contract instance-----------------------")
-	fileHubAddress := common.HexToAddress("0xd84ba29772d30b73320310f39e235d024ead7615")
+	//fileHubAddress := common.HexToAddress("0xd84ba29772d30b73320310f39e235d024ead7615")
+	fileHubAddress := address
 	instance, err := filehub.NewFileHub(fileHubAddress, client)
 	if err != nil {
 		logrus.Fatal(err)
@@ -52,7 +52,7 @@ func main() {
 	// call `register` to register user
 	fmt.Println("\n-------------------starting call register-----------------------")
 	filehubSession := &filehub.FileHubSession{Contract: instance, CallOpts: *client.GetCallOpts(), TransactOpts: *client.GetTransactOpts()}
-	tx, _, err := filehubSession.Register(aliceAddress) // call `register` API
+	tx, _, err = filehubSession.Register(aliceAddress) // call `register` API
 	if err != nil {
 		logrus.Fatal(err)
 	}
